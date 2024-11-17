@@ -1,0 +1,53 @@
+.header{
+    margin-top: 33px;
+    box-shadow: rgb(229, 229, 229) 0px 0px 20px;
+    border-radius: 28px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(28, 28, 28, 0.1);
+    padding: 17px 33px;
+    
+}
+body{
+    overflow-x: hidden;
+}
+.home-slider {
+    margin-bottom: 100px;
+    z-index: 20;
+    .slide-img {
+        border-radius: 20px;
+        overflow: hidden;
+        height: 300px;
+        // aspect-ratio: 1140/300;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+            height: 300px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .swiper-pagination{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-pagination-bullet{
+        background-color: $white;
+        width: 5px;
+        height: 5px
+    }
+    .swiper-pagination-bullet-active{
+        width: 11px;
+        height: 11px;
+    }
+}

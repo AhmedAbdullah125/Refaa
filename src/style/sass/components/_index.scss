@@ -1,0 +1,42 @@
+.project-img-cont{
+    position: relative;
+    .overlay:hover{
+        opacity: 0;
+    }
+}
+:root {
+    overflow-x: hidden;
+}
+.works {
+    .slide-img{
+        height: 300px;
+        .overlay{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px;
+            color: white;
+            gap: 20px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+    }
+    .slide-img:hover .overlay{
+        top: 0;
+        opacity: 1;
+    }
+    .swiper{
+        padding-bottom: 30px;
+        .swiper-pagination{
+            bottom: 10px;
+        }
+        .swiper-pagination-bullet-active{
+            transform: scale(2);
+        }
+    }
+}
