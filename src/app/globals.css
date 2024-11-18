@@ -7,6 +7,8 @@
 :root {
   font-family: 'Almarai', sans-serif;
   overflow-y: scroll;
+    overflow-x: hiddenn !important;
+
 }
 html body[data-scroll-locked] {
   /* --removed-body-scroll-bar-size: 0 !important; */
