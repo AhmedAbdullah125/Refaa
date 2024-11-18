@@ -58,7 +58,7 @@ export default function Contact() {
                             <FormItem >
                                 <FormControl>
                                     <div className="input-cont p-3 border lg:gap-10 gap-3 rounded-3xl flex flex-row items-center m-auto border-primaryColor w-[90%] max-w-[936px]">
-                                        <Button type='submit' className='px-14 h-14 lg:h-20 bg-primaryColor rounded-xl text-white'>إشتراك</Button>
+                                        <Button type='submit' className='px-5 md:px-14 h-10 lg:h-20 bg-primaryColor rounded-xl text-white'>إشتراك</Button>
                                         <Input {...field} placeholder='كتابة البريد الإلكتروني' className='shadow-none h-14 lg:h-20 w-[100%] bg-transparent border-none outline-none active:bottom-0' />
                                     </div>
                                 </FormControl>

@@ -22,7 +22,6 @@ export default function Home() {
       <Projects></Projects>
       <Works/>
       <Testmonials />
-      
     </main>
   );
 }

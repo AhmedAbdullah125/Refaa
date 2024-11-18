@@ -12,12 +12,18 @@ export default function Header() {
     document.getElementById('side-menu').style.insetInlineStart = 0;
     document.getElementById('side-menu').style.opacity = 1;
     document.getElementById('side-menu').style.visibility = 'visible';
+    document.getElementById('side-menu').style.display = 'flex';
+    document.getElementById('root').style.overflow = 'hidden';
   }
   //open mobile menue
   function closeMenu() {
     document.getElementById('side-menu').style.insetInlineStart = '100%';
     document.getElementById('side-menu').style.opacity = 0;
     document.getElementById('side-menu').style.visibility = 'hidden';
+    document.getElementById('side-menu').style.display = 'none';
+
+    document.getElementById('root').style.overflow = 'unset';
+
   }
   const [position, setPosition] = React.useState('bottom');
   const currentPath = usePathname();
@@ -60,14 +66,14 @@ export default function Header() {
           <li className={`${currentPath == "/projects" ? "activeLink" : ""} text-base font-bold text-black hover:text-primaryColor`}>
             <Link href={'/projects'}>مشاريعنا</Link>
           </li>
-          <li className={`${currentPath == "/calculator" ? "activeLink" : ""} text-base font-bold text-black hover:text-primaryColor`}>
-            <Link href={'/calculator'}>الحاسبة</Link>
-          </li>
           <li className={`${currentPath == "/videos" ? "activeLink" : ""} text-base font-bold text-black hover:text-primaryColor`}>
             <Link href={'/videos'}>فيديوهات</Link>
           </li>
+          <li className={`${currentPath == "/calculator" ? "activeLink" : ""} text-base font-bold text-black hover:text-primaryColor`}>
+            <Link href={'/'}>الحاسبة</Link>
+          </li>
           <li className={`${currentPath == "/offer" ? "activeLink" : ""} text-base font-bold text-black hover:text-primaryColor`}>
-            <Link href={'/offer'}>طلب عرض اسعار</Link>
+            <Link href={'/'}>طلب عرض اسعار</Link>
           </li>
           
 
@@ -76,7 +82,7 @@ export default function Header() {
       <div className="links hidden lg:block">
         <ul className="flex items-center gap-9">
           <li className={`${currentPath == "/contact" ? "activeLink" : ""} text-base font-bold text-black hover:text-primaryColor`}>
-            <Link href={'/contact'}>إتصل بنا</Link>
+            <Link href={'/contactus'}>إتصل بنا</Link>
           </li>
 
         </ul>
@@ -104,17 +110,17 @@ export default function Header() {
               <li className="activeLink" onClick={closeMenu}>
                 <Link href={'/'}>الرئيسية</Link>
               </li>
-              <li className="activeLink" onClick={closeMenu}>
-                <Link href={'/'}>مشاريعنا</Link>
+              <li className="" onClick={closeMenu}>
+                <Link href={'/projects'}>مشاريعنا</Link>
               </li>
-              <li className="activeLink" onClick={closeMenu}>
+              <li className="" onClick={closeMenu}>
+                <Link href={'/videos'}>فيديوهات</Link>
+              </li>
+              <li className="" onClick={closeMenu}>
                 <Link href={'/'}>الحاسبة</Link>
               </li>
-              <li className="activeLink" onClick={closeMenu}>
-                <Link href={'/'}>فيديوهات</Link>
-              </li>
               <li onClick={closeMenu}>
-                <Link href={'/about'}>طلب عرض اسعار</Link>
+                <Link href={'/'}>طلب عرض اسعار</Link>
               </li>
               <li onClick={closeMenu}>
                 <Link href={'/contactus'}>إتصل بنا</Link>
